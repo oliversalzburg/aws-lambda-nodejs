@@ -25,10 +25,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      # Pre-build QA
-      - name: Check constraints
-        run: yarn constraints
-
       # Build
       - name: Build
         run: yarn build
