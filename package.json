@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "yarn3-typescript-nodejs-esbuild",
+  "license": "MIT",
+  "author": "Oliver Salzburg <oliver.salzburg@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "clean": "rm -rf ./output",
+    "lint": "yarn run lint:all",
+    "lint:all": "yarn run lint:eslint && yarn run lint:prettier && yarn run lint:tsc",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "lint:tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^1.0.0",
+    "@aws-lambda-powertools/metrics": "^1.0.0",
+    "@aws-lambda-powertools/tracer": "^1.0.0",
+    "@middy/core": "^5.2.1",
+    "@middy/http-cors": "^5.2.1",
+    "@middy/http-error-handler": "^5.2.1",
+    "@middy/http-event-normalizer": "^5.2.1",
+    "@middy/http-header-normalizer": "^5.2.1",
+    "@middy/http-json-body-parser": "^5.2.1",
+    "@middy/http-response-serializer": "^5.2.1",
+    "@middy/http-security-headers": "^5.2.1",
+    "@middy/secrets-manager": "5.2.1",
+    "@middy/validator": "^5.2.1",
+    "@oliversalzburg/js-utils": "0.0.27",
+    "@types/aws-lambda": "8.10.130",
+    "aws-lambda": "1.0.7",
+    "json-schema-to-ts": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "4.3.11",
+    "@types/eslint": "8.44.7",
+    "@types/mocha": "10.0.6",
+    "@types/node": "20.9.0",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0",
+    "chai": "5.0.0",
+    "esbuild": "0.19.5",
+    "eslint": "8.53.0",
+    "lint-staged": "15.1.0",
+    "mocha": "10.2.0",
+    "prettier": "3.1.0",
+    "prettier-package-json": "2.8.0",
+    "prettier-plugin-organize-imports": "3.2.4",
+    "typescript": "5.2.2"
+  },
+  "packageManager": "yarn@4.0.2"
+}
