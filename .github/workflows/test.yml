@@ -25,14 +25,14 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      # Build
-      - name: Build
-        run: yarn build
-
-      # Post-build QA
+      # QA
       - name: Lint ESLint
         run: yarn lint:eslint
       - name: Lint Prettier
         run: yarn lint:prettier
       - name: Lint TSC
         run: yarn lint:tsc
+
+      # Build + test
+      - name: Run tests
+        run: yarn test

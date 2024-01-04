@@ -5,13 +5,16 @@
   "author": "Oliver Salzburg <oliver.salzburg@gmail.com>",
   "type": "module",
   "scripts": {
-    "build": "node build.js",
+    "build": "yarn run build:tsc",
+    "build:esbuild": "node build.js",
+    "build:tsc": "tsc",
     "clean": "rm -rf ./output",
     "lint": "yarn run lint:all",
     "lint:all": "yarn run lint:eslint && yarn run lint:prettier && yarn run lint:tsc",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
-    "lint:tsc": "tsc --noEmit"
+    "lint:tsc": "tsc --noEmit",
+    "test": "yarn build && .scripts/test.sh"
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "1.17.0",
