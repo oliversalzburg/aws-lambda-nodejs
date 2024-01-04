@@ -26,9 +26,7 @@ export const errorHandlerMiddleware = (opts = {}) => {
       return;
     }
 
-    // TODO: Decide if you want to expose this error or not.
-    const exposeError = true;
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    const exposeError = error.status < 500;
     const subjectError = exposeError ? error : new InternalError("Internal Server Error");
 
     const serializedError = JSON.stringify({
@@ -39,7 +37,7 @@ export const errorHandlerMiddleware = (opts = {}) => {
     });
     normalizeHttpResponse(request);
     request.response = {
-      statusCode: 500,
+      statusCode: error.status,
       body: serializedError,
       headers: {
         ...(request.response as { headers?: Record<string, string> } | null)?.headers,
