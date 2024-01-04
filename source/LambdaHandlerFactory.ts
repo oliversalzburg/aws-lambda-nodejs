@@ -111,7 +111,7 @@ export function makeLambdaHandler(
   }
 
   if (!isNil(options?.secretsToFetch)) {
-    const region = options?.awsSecretsRegion;
+    const region = options.awsSecretsRegion;
     if (isNil(region)) {
       throw new InvalidOperationError(
         "Unable to retrieve secrets without specifying region to retrieve from.",
@@ -126,7 +126,7 @@ export function makeLambdaHandler(
         },
         cacheExpiry: 30 * 1000,
         disablePrefetch: true,
-        fetchData: options?.secretsToFetch,
+        fetchData: options.secretsToFetch,
       }),
     );
   }
