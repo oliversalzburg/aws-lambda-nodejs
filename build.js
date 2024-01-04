@@ -7,6 +7,7 @@ esbuild
     format: "esm",
     outfile: "./output/main.js",
     platform: "node",
+    sourcemap: true,
     target: "node20",
   })
   .catch(console.error);
