@@ -10,6 +10,7 @@ export const PingFunctionEventSchema = {
         ping: {
           description:
             "The local time of the client when the message was generated, as a UNIX timestamp.",
+          min: 0,
           type: "number",
         },
       },
@@ -31,12 +32,17 @@ export const PingFunctionResultSchema = {
           description: "Only for informational purposes.",
           type: "string",
         },
+        ping: {
+          description: "The time that was provided with the incoming ping signal.",
+          min: 0,
+          type: "number",
+        },
         pong: {
           description: "The time at which the ping reached the API, as a UNIX timestamp.",
           type: "number",
         },
       },
-      required: ["pong"],
+      required: ["ping", "pong"],
       type: "object",
     },
   },

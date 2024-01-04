@@ -28,6 +28,7 @@ export class PingFunction implements LambdaInterface {
     return {
       body: {
         message: this.#message,
+        ping: event.body.ping,
         pong: new Date().getTime(),
       },
       headers: {

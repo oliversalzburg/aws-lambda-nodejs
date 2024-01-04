@@ -11,8 +11,14 @@ it("can be constructed", () => {
 
 it("pings", async () => {
   const func = new PingFunction("testing");
-  const result = await func.handler(ApiGatewayRequest.from({ ping: 0 }, {}, {}, {}), {} as Context);
+  const now = new Date().getTime();
+  const result = await func.handler(
+    ApiGatewayRequest.from({ ping: now }, {}, {}, {}),
+    {} as Context,
+  );
   expect(result).to.exist;
   expect(result.body.message).to.equal("testing");
+  expect(result.body.ping).to.equal(now);
   expect(result.body.pong).to.be.a("number");
+  expect(result.body.pong).to.be.greaterThan(now);
 });
