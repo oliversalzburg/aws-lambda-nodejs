@@ -21,6 +21,8 @@ export class PingFunction implements LambdaInterface {
   async handler(event: PingFunctionEvent, context: Context): Promise<PingFunctionResult> {
     logger.debug("Accepted new PING request.");
 
+    const now = new Date().getTime();
+
     logger.info(`Incoming PING request with timestamp: '${event.body.ping}'`);
 
     await sleep(1);
@@ -29,7 +31,7 @@ export class PingFunction implements LambdaInterface {
       body: {
         message: this.#message,
         ping: event.body.ping,
-        pong: new Date().getTime(),
+        pong: now,
       },
       headers: {
         "Cache-Control": "no-cache; max-age: 0;",
