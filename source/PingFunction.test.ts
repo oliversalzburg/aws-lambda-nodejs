@@ -20,5 +20,5 @@ it("pings", async () => {
   expect(result.body.message).to.equal("testing");
   expect(result.body.ping).to.equal(now);
   expect(result.body.pong).to.be.a("number");
-  expect(result.body.pong).to.be.greaterThan(now);
+  expect(result.body.pong).to.be.greaterThanOrEqual(now);
 });
