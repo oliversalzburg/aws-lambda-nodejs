@@ -44,7 +44,7 @@
     "@typescript-eslint/eslint-plugin": "7.0.1",
     "@typescript-eslint/parser": "7.0.1",
     "chai": "5.1.0",
-    "esbuild": "0.20.0",
+    "esbuild": "0.20.1",
     "eslint": "8.56.0",
     "lint-staged": "15.2.2",
     "mocha": "10.3.0",
