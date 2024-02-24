@@ -17,9 +17,9 @@
     "test": "yarn build && .scripts/test.sh"
   },
   "dependencies": {
-    "@aws-lambda-powertools/logger": "1.18.0",
-    "@aws-lambda-powertools/metrics": "1.18.0",
-    "@aws-lambda-powertools/tracer": "1.18.0",
+    "@aws-lambda-powertools/logger": "1.18.1",
+    "@aws-lambda-powertools/metrics": "1.18.1",
+    "@aws-lambda-powertools/tracer": "1.18.1",
     "@aws-sdk/client-secrets-manager": "3.514.0",
     "@middy/core": "5.2.3",
     "@middy/http-cors": "5.2.3",
