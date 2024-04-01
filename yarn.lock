@@ -1074,18 +1074,18 @@ __metadata:
   linkType: hard
 
 "@smithy/core@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "@smithy/core@npm:1.4.0"
+  version: 1.4.1
+  resolution: "@smithy/core@npm:1.4.1"
   dependencies:
     "@smithy/middleware-endpoint": "npm:^2.5.0"
-    "@smithy/middleware-retry": "npm:^2.2.0"
+    "@smithy/middleware-retry": "npm:^2.3.0"
     "@smithy/middleware-serde": "npm:^2.3.0"
     "@smithy/protocol-http": "npm:^3.3.0"
     "@smithy/smithy-client": "npm:^2.5.0"
     "@smithy/types": "npm:^2.12.0"
     "@smithy/util-middleware": "npm:^2.2.0"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/a5ece1a4751be0778754cdff7484fd8930068c1ea858c696836ecd9c60fdd7944aef27590d35b95f6a4c499427c7b653ffddc452ad3ee6f8906e2a57e06e39ad
+  checksum: 10c0/b90f253ab5d110de2f30e5f049284e7956fd06aefd670956ddd38142981a55616c5466443674b623003f7005c93d54eb4a184e623a7fec6c91a27e8a091db045
   languageName: node
   linkType: hard
 
@@ -1184,9 +1184,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@smithy/middleware-retry@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "@smithy/middleware-retry@npm:2.2.0"
+"@smithy/middleware-retry@npm:^2.2.0, @smithy/middleware-retry@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@smithy/middleware-retry@npm:2.3.0"
   dependencies:
     "@smithy/node-config-provider": "npm:^2.3.0"
     "@smithy/protocol-http": "npm:^3.3.0"
@@ -1196,8 +1196,8 @@ __metadata:
     "@smithy/util-middleware": "npm:^2.2.0"
     "@smithy/util-retry": "npm:^2.2.0"
     tslib: "npm:^2.6.2"
-    uuid: "npm:^8.3.2"
-  checksum: 10c0/6b4b0913b729b2f56e30cb9cef42cdd3e41a2ad570e1e6b60f8662326e1f1063ff2335176c5308f99153c13c3a3e8d30f5adacb2cd744d0fbb10192ebb021ad9
+    uuid: "npm:^9.0.1"
+  checksum: 10c0/ea4be0c81565ced078767e0d149ccd65f8e54114b9ce7ecea39df73e88f800079b9a246940dd2761d452ac46da52f62cf6d80ba3a4febd09324a520cdb6830b3
   languageName: node
   linkType: hard
 
@@ -1756,12 +1756,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"agent-base@npm:^7.0.2, agent-base@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "agent-base@npm:7.1.0"
+"agent-base@npm:^7.0.2, agent-base@npm:^7.1.0, agent-base@npm:^7.1.1":
+  version: 7.1.1
+  resolution: "agent-base@npm:7.1.1"
   dependencies:
     debug: "npm:^4.3.4"
-  checksum: 10c0/fc974ab57ffdd8421a2bc339644d312a9cca320c20c3393c9d8b1fd91731b9bbabdb985df5fc860f5b79d81c3e350daa3fcb31c5c07c0bb385aafc817df004ce
+  checksum: 10c0/e59ce7bed9c63bf071a30cc471f2933862044c97fd9958967bfe22521d7a0f601ce4ed5a8c011799d0c726ca70312142ae193bbebb60f576b52be19d4a363b50
   languageName: node
   linkType: hard
 
@@ -1999,8 +1999,8 @@ __metadata:
   linkType: hard
 
 "aws-sdk@npm:^2.814.0":
-  version: 2.1584.0
-  resolution: "aws-sdk@npm:2.1584.0"
+  version: 2.1589.0
+  resolution: "aws-sdk@npm:2.1589.0"
   dependencies:
     buffer: "npm:4.9.2"
     events: "npm:1.1.1"
@@ -2012,13 +2012,13 @@ __metadata:
     util: "npm:^0.12.4"
     uuid: "npm:8.0.0"
     xml2js: "npm:0.6.2"
-  checksum: 10c0/8415360cb5582e0d970724ab146381b848b703106e871a35f16c05ccb7aa02a3d5c14116e4d9ce59280b112d2e8382643461d4da25e9fa99049dbcd18020a1f0
+  checksum: 10c0/5c15d6f5ff9c3efe22f12c75a821ae2ae61a28a3b74eda458f3a24c7e5d425a81d67bf6845b6fd3736304c8ae007ffab8e9b9adafaf70ac30529f315c2cf97e1
   languageName: node
   linkType: hard
 
 "aws-xray-sdk-core@npm:^3.5.3":
-  version: 3.5.4
-  resolution: "aws-xray-sdk-core@npm:3.5.4"
+  version: 3.6.0
+  resolution: "aws-xray-sdk-core@npm:3.6.0"
   dependencies:
     "@aws-sdk/types": "npm:^3.4.1"
     "@smithy/service-error-classification": "npm:^2.0.4"
@@ -2026,7 +2026,7 @@ __metadata:
     atomic-batcher: "npm:^1.0.2"
     cls-hooked: "npm:^4.2.2"
     semver: "npm:^7.5.3"
-  checksum: 10c0/b7c2f795ac8d6df6b1eab16c8f11ce2875a27360249ef7269f83564b8ab62a5cdf35bcfb6a84fe678576574da627384ef1ccd796d38918f4352d406407da72f0
+  checksum: 10c0/4dca3393bb2f823b287e959c06be9981dcd1f4d4d1e1110ede9af45391aa9149016ce9a62f8ccea8082e2893b5302bd04ca5e05b48f756fe47515895388ebfbd
   languageName: node
   linkType: hard
 
@@ -3195,17 +3195,17 @@ __metadata:
   linkType: hard
 
 "glob@npm:^10.2.2, glob@npm:^10.3.10":
-  version: 10.3.10
-  resolution: "glob@npm:10.3.10"
+  version: 10.3.12
+  resolution: "glob@npm:10.3.12"
   dependencies:
     foreground-child: "npm:^3.1.0"
-    jackspeak: "npm:^2.3.5"
+    jackspeak: "npm:^2.3.6"
     minimatch: "npm:^9.0.1"
-    minipass: "npm:^5.0.0 || ^6.0.2 || ^7.0.0"
-    path-scurry: "npm:^1.10.1"
+    minipass: "npm:^7.0.4"
+    path-scurry: "npm:^1.10.2"
   bin:
     glob: dist/esm/bin.mjs
-  checksum: 10c0/13d8a1feb7eac7945f8c8480e11cd4a44b24d26503d99a8d8ac8d5aefbf3e9802a2b6087318a829fad04cb4e829f25c5f4f1110c68966c498720dd261c7e344d
+  checksum: 10c0/f60cefdc1cf3f958b2bb5823e1b233727f04916d489dc4641d76914f016e6704421e06a83cbb68b0cb1cb9382298b7a88075b844ad2127fc9727ea22b18b0711
   languageName: node
   linkType: hard
 
@@ -3611,7 +3611,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jackspeak@npm:^2.3.5":
+"jackspeak@npm:^2.3.6":
   version: 2.3.6
   resolution: "jackspeak@npm:2.3.6"
   dependencies:
@@ -3850,7 +3850,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^10.0.1, lru-cache@npm:^9.1.1 || ^10.0.0":
+"lru-cache@npm:^10.0.1, lru-cache@npm:^10.2.0":
   version: 10.2.0
   resolution: "lru-cache@npm:10.2.0"
   checksum: 10c0/c9847612aa2daaef102d30542a8d6d9b2c2bb36581c1bf0dc3ebf5e5f3352c772a749e604afae2e46873b930a9e9523743faac4e5b937c576ab29196774712ee
@@ -3932,7 +3932,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:9.0.3, minimatch@npm:^9.0.1":
+"minimatch@npm:9.0.3":
   version: 9.0.3
   resolution: "minimatch@npm:9.0.3"
   dependencies:
@@ -3956,6 +3956,15 @@ __metadata:
   dependencies:
     brace-expansion: "npm:^2.0.1"
   checksum: 10c0/3defdfd230914f22a8da203747c42ee3c405c39d4d37ffda284dac5e45b7e1f6c49aa8be606509002898e73091ff2a3bbfc59c2c6c71d4660609f63aa92f98e3
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^9.0.1":
+  version: 9.0.4
+  resolution: "minimatch@npm:9.0.4"
+  dependencies:
+    brace-expansion: "npm:^2.0.1"
+  checksum: 10c0/2c16f21f50e64922864e560ff97c587d15fd491f65d92a677a344e970fe62aafdbeafe648965fa96d33c061b4d0eabfe0213466203dd793367e7f28658cf6414
   languageName: node
   linkType: hard
 
@@ -4026,7 +4035,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minipass@npm:^5.0.0 || ^6.0.2 || ^7.0.0, minipass@npm:^7.0.2, minipass@npm:^7.0.3":
+"minipass@npm:^5.0.0 || ^6.0.2 || ^7.0.0, minipass@npm:^7.0.2, minipass@npm:^7.0.3, minipass@npm:^7.0.4":
   version: 7.0.4
   resolution: "minipass@npm:7.0.4"
   checksum: 10c0/6c7370a6dfd257bf18222da581ba89a5eaedca10e158781232a8b5542a90547540b4b9b7e7f490e4cda43acfbd12e086f0453728ecf8c19e0ef6921bc5958ac5
@@ -4146,8 +4155,8 @@ __metadata:
   linkType: hard
 
 "node-gyp@npm:latest":
-  version: 10.0.1
-  resolution: "node-gyp@npm:10.0.1"
+  version: 10.1.0
+  resolution: "node-gyp@npm:10.1.0"
   dependencies:
     env-paths: "npm:^2.2.0"
     exponential-backoff: "npm:^3.1.1"
@@ -4161,7 +4170,7 @@ __metadata:
     which: "npm:^4.0.0"
   bin:
     node-gyp: bin/node-gyp.js
-  checksum: 10c0/abddfff7d873312e4ed4a5fb75ce893a5c4fb69e7fcb1dfa71c28a6b92a7f1ef6b62790dffb39181b5a82728ba8f2f32d229cf8cbe66769fe02cea7db4a555aa
+  checksum: 10c0/9cc821111ca244a01fb7f054db7523ab0a0cd837f665267eb962eb87695d71fb1e681f9e21464cc2fd7c05530dc4c81b810bca1a88f7d7186909b74477491a3c
   languageName: node
   linkType: hard
 
@@ -4348,13 +4357,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-scurry@npm:^1.10.1":
-  version: 1.10.1
-  resolution: "path-scurry@npm:1.10.1"
+"path-scurry@npm:^1.10.2":
+  version: 1.10.2
+  resolution: "path-scurry@npm:1.10.2"
   dependencies:
-    lru-cache: "npm:^9.1.1 || ^10.0.0"
+    lru-cache: "npm:^10.2.0"
     minipass: "npm:^5.0.0 || ^6.0.2 || ^7.0.0"
-  checksum: 10c0/e5dc78a7348d25eec61ab166317e9e9c7b46818aa2c2b9006c507a6ff48c672d011292d9662527213e558f5652ce0afcc788663a061d8b59ab495681840c0c1e
+  checksum: 10c0/d723777fbf9627f201e64656680f66ebd940957eebacf780e6cce1c2919c29c116678b2d7dbf8821b3a2caa758d125f4444005ccec886a25c8f324504e48e601
   languageName: node
   linkType: hard
 
@@ -4822,13 +4831,13 @@ __metadata:
   linkType: hard
 
 "socks-proxy-agent@npm:^8.0.1":
-  version: 8.0.2
-  resolution: "socks-proxy-agent@npm:8.0.2"
+  version: 8.0.3
+  resolution: "socks-proxy-agent@npm:8.0.3"
   dependencies:
-    agent-base: "npm:^7.0.2"
+    agent-base: "npm:^7.1.1"
     debug: "npm:^4.3.4"
     socks: "npm:^2.7.1"
-  checksum: 10c0/a842402fc9b8848a31367f2811ca3cd14c4106588b39a0901cd7a69029998adfc6456b0203617c18ed090542ad0c24ee4e9d4c75a0c4b75071e214227c177eb7
+  checksum: 10c0/4950529affd8ccd6951575e21c1b7be8531b24d924aa4df3ee32df506af34b618c4e50d261f4cc603f1bfd8d426915b7d629966c8ce45b05fb5ad8c8b9a6459d
   languageName: node
   linkType: hard
 
@@ -5185,15 +5194,6 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: 10c0/e62301a1c6102da5ce9a147b492a4b5cfa14d2e8fdf4a6ebfda7929cb72d186f84173815ec18fa4160a03bf9724b16ece3737b3ac6701815bc965f8fa4279298
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^8.3.2":
-  version: 8.3.2
-  resolution: "uuid@npm:8.3.2"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 10c0/bcbb807a917d374a49f475fae2e87fdca7da5e5530820ef53f65ba1d12131bd81a92ecf259cc7ce317cbe0f289e7d79fdfebcef9bfa3087c8c8a2fa304c9be54
   languageName: node
   linkType: hard
 
