@@ -1284,8 +1284,8 @@ __metadata:
   linkType: hard
 
 "@smithy/signature-v4@npm:^2.2.0":
-  version: 2.2.1
-  resolution: "@smithy/signature-v4@npm:2.2.1"
+  version: 2.3.0
+  resolution: "@smithy/signature-v4@npm:2.3.0"
   dependencies:
     "@smithy/is-array-buffer": "npm:^2.2.0"
     "@smithy/types": "npm:^2.12.0"
@@ -1294,7 +1294,7 @@ __metadata:
     "@smithy/util-uri-escape": "npm:^2.2.0"
     "@smithy/util-utf8": "npm:^2.3.0"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/8bb50e95cf5b74226e6baceedf09cee73742f98706f6e5f50ef6be29b2a9b7b01dab49d25be26cb581cdea195661962af85ce4d0abcdce4359bbc0b311eae842
+  checksum: 10c0/b8a0c312352a863a875e723098ae2dcedcd586cc323b4cb16a03ff056c3f9d2c09cefffccb19426a25a1450de8612af17ccecda025e47269c6f8c4c514640063
   languageName: node
   linkType: hard
 
@@ -1975,8 +1975,8 @@ __metadata:
   linkType: hard
 
 "aws-sdk@npm:^2.814.0":
-  version: 2.1594.0
-  resolution: "aws-sdk@npm:2.1594.0"
+  version: 2.1599.0
+  resolution: "aws-sdk@npm:2.1599.0"
   dependencies:
     buffer: "npm:4.9.2"
     events: "npm:1.1.1"
@@ -1988,7 +1988,7 @@ __metadata:
     util: "npm:^0.12.4"
     uuid: "npm:8.0.0"
     xml2js: "npm:0.6.2"
-  checksum: 10c0/934d50b860932a4e92aa9141465aec3f54dd92e062315a6fe36b562332025a23478f55d627670c8890f87371078e4172119b89fe1f9e90d19fdaaad3f60db1d0
+  checksum: 10c0/720e253463b7c5cfae726f49253400b22f632d0fc6a2d753e4fb379185592ed52bb8a6480936eacc34cba5d26ed81dc910677315392bca18ab8883cde9e0624d
   languageName: node
   linkType: hard
 
@@ -4818,12 +4818,12 @@ __metadata:
   linkType: hard
 
 "socks@npm:^2.7.1":
-  version: 2.8.1
-  resolution: "socks@npm:2.8.1"
+  version: 2.8.3
+  resolution: "socks@npm:2.8.3"
   dependencies:
     ip-address: "npm:^9.0.5"
     smart-buffer: "npm:^4.2.0"
-  checksum: 10c0/ac77b515c260473cc7c4452f09b20939e22510ce3ae48385c516d1d5784374d5cc75be3cb18ff66cc985a7f4f2ef8fef84e984c5ec70aad58355ed59241f40a8
+  checksum: 10c0/d54a52bf9325165770b674a67241143a3d8b4e4c8884560c4e0e078aace2a728dffc7f70150660f51b85797c4e1a3b82f9b7aa25e0a0ceae1a243365da5c51a7
   languageName: node
   linkType: hard
 
