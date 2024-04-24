@@ -1,7 +1,7 @@
-import { LambdaInterface } from "@aws-lambda-powertools/commons";
 import { sleep } from "@oliversalzburg/js-utils/async.js";
 import { Context } from "aws-lambda";
 import { logger } from "./AwsPowerTools.js";
+import { LambdaInterface } from "./LambdaHandlerFactory.js";
 import { PingFunctionEvent, PingFunctionResult } from "./schema.js";
 
 export class PingFunction implements LambdaInterface {
