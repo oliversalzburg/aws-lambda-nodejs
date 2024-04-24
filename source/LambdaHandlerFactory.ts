@@ -1,6 +1,6 @@
-import { injectLambdaContext } from "@aws-lambda-powertools/logger";
-import { logMetrics } from "@aws-lambda-powertools/metrics";
-import { captureLambdaHandler } from "@aws-lambda-powertools/tracer";
+import { injectLambdaContext } from "@aws-lambda-powertools/logger/middleware";
+import { logMetrics } from "@aws-lambda-powertools/metrics/middleware";
+import { captureLambdaHandler } from "@aws-lambda-powertools/tracer/middleware";
 import middy, { MiddyHandlerObject } from "@middy/core";
 import eventNormalizer from "@middy/event-normalizer";
 import cors from "@middy/http-cors";
