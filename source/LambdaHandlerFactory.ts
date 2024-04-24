@@ -1,8 +1,8 @@
-import { LambdaInterface } from "@aws-lambda-powertools/commons";
 import { injectLambdaContext } from "@aws-lambda-powertools/logger";
 import { logMetrics } from "@aws-lambda-powertools/metrics";
 import { captureLambdaHandler } from "@aws-lambda-powertools/tracer";
-import middy from "@middy/core";
+import middy, { MiddyHandlerObject } from "@middy/core";
+import eventNormalizer from "@middy/event-normalizer";
 import cors from "@middy/http-cors";
 import httpErrorHandler from "@middy/http-error-handler";
 import httpEventNormalizer from "@middy/http-event-normalizer";
@@ -12,13 +12,39 @@ import httpResponseSerializer from "@middy/http-response-serializer";
 import httpSecurityHeaders from "@middy/http-security-headers";
 import secretsManager from "@middy/secrets-manager";
 import validator from "@middy/validator";
-import { transpileSchema } from "@middy/validator/transpile";
 import { InvalidOperationError } from "@oliversalzburg/js-utils/error/InvalidOperationError.js";
 import { isNil, mustExist } from "@oliversalzburg/js-utils/nil.js";
+import { Context } from "aws-lambda";
 import { logger, metrics, tracer } from "./AwsPowerTools.js";
 import errorHandlerMiddleware from "./ErrorHandlerMiddleware.js";
 
-export interface LambdaHandlerOptions {
+export type Handler<TEvent, TResult, TContext> = (
+  event: TEvent,
+  context: TContext,
+  opts: MiddyHandlerObject,
+  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
+) => void | Promise<TResult>;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type SyncHandler<THandler extends Handler<any, any, any>> = (
+  event: Parameters<THandler>[0],
+  context: Parameters<THandler>[1],
+  opts: MiddyHandlerObject,
+) => ReturnType<THandler>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type AsyncHandler<THandler extends Handler<any, any, any>> = (
+  event: Parameters<THandler>[0],
+  context: Parameters<THandler>[1],
+  opts: MiddyHandlerObject,
+) => ReturnType<THandler>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export interface LambdaInterface<E = any, R = any, C = any> {
+  handler: SyncHandler<Handler<E, R, C>> | AsyncHandler<Handler<E, R, C>>;
+}
+
+export interface LambdaHandlerOptions<
+  TSecrets extends Record<string, string> | undefined = undefined,
+> {
   /**
    * From which AWS region should secrets from the Secrets Manager service be retrieved?
    * You only need to specify this if you want to use `secretsToFetch`.
@@ -29,7 +55,7 @@ export interface LambdaHandlerOptions {
   /**
    * Does this Lambda handle HTTP events?
    */
-  readonly isHttpHandler?: boolean;
+  readonly isHttpHandler?: true | "readonly";
 
   /**
    * From which public URLs can this Lambda be called?
@@ -38,39 +64,49 @@ export interface LambdaHandlerOptions {
   readonly publicUrls?: string;
 
   /**
-   * A JSON schema describing the `context` object of a Lambda handler.
+   * A function that validates the context object.
+   * This is expected to be a precompiled Ajv validator.
+   * See <https://middy.js.org/docs/middlewares/validator/> for details.
    */
-  readonly schemaContext?: Record<string, unknown>;
+  readonly schemaContextValidator?: AjvPrecompiledValidator;
 
   /**
-   * A JSON schema describing the `event` object of a Lambda handler.
+   * A function that validates the event object the lambda receives.
+   * This is expected to be a precompiled Ajv validator.
+   * See <https://middy.js.org/docs/middlewares/validator/> for details.
    */
-  readonly schemaEvent?: Record<string, unknown>;
+  readonly schemaEventValidator?: AjvPrecompiledValidator;
 
   /**
-   * A JSON schema describing the result of a Lambda handler.
+   * A function that validates the response object of the lambda.
+   * This is expected to be a precompiled Ajv validator.
+   * See <https://middy.js.org/docs/middlewares/validator/> for details.
    */
-  readonly schemaResult?: Record<string, unknown>;
+  readonly schemaResultValidator?: AjvPrecompiledValidator;
 
   /**
    * Which secrets, if any, should be fetched from Secrets Manager, and be made available
    * on the `context` of your event handler?
    */
-  readonly secretsToFetch?: Record<string, string>;
+  readonly secretsToFetch?: TSecrets;
 }
 
-export function makeLambdaHandler(
-  handlerClassInstance: LambdaInterface,
-  options?: LambdaHandlerOptions,
-) {
+export function makeLambdaHandler<
+  TEvent,
+  TResult,
+  TSecrets extends Record<string, string>,
+  TOptions extends LambdaHandlerOptions<TSecrets>,
+  TContext extends Context &
+    (TOptions extends { secretsToFetch: TSecrets } ? { [key in keyof TSecrets]: string } : never),
+>(handlerClassInstance: LambdaInterface<TEvent, TResult, TContext>, options?: TOptions) {
   const boundHandler = handlerClassInstance.handler.bind(handlerClassInstance);
 
-  let middyHandler = middy(boundHandler)
+  let middyHandler = middy<TEvent, TResult, Error, TContext>(boundHandler)
     .use(captureLambdaHandler(tracer))
     .use(logMetrics(metrics, { captureColdStartMetric: true }))
     .use(injectLambdaContext(logger, { clearState: true }));
 
-  if (options?.isHttpHandler === undefined || options.isHttpHandler) {
+  if (options?.isHttpHandler) {
     middyHandler = middyHandler
       .use(httpEventNormalizer())
       .use(httpHeaderNormalizer())
@@ -85,29 +121,15 @@ export function makeLambdaHandler(
           ],
           defaultContentType: "application/json",
         }),
-      );
-  }
+      ) as typeof middyHandler;
 
-  // Check if the passed event schema has a `body` property.
-  // If so, ensure the body is parsed as JSON.
-  if (!isNil((options?.schemaEvent?.properties as Record<string, unknown> | null)?.body)) {
-    middyHandler = middyHandler.use(httpJsonBodyParser({ disableContentTypeError: false }));
-  }
-
-  if (
-    !isNil(options?.schemaContext) ||
-    !isNil(options?.schemaEvent) ||
-    !isNil(options?.schemaResult)
-  ) {
-    const { schemaContext, schemaEvent, schemaResult } = mustExist(options);
-
-    middyHandler = middyHandler.use(
-      validator({
-        contextSchema: !isNil(schemaContext) ? transpileSchema(schemaContext) : undefined,
-        eventSchema: !isNil(schemaEvent) ? transpileSchema(schemaEvent) : undefined,
-        responseSchema: !isNil(schemaResult) ? transpileSchema(schemaResult) : undefined,
-      }),
-    );
+    if (options.isHttpHandler !== "readonly") {
+      middyHandler = middyHandler.use(
+        httpJsonBodyParser({ disableContentTypeError: false }),
+      ) as typeof middyHandler;
+    }
+  } else {
+    middyHandler = middyHandler.use(eventNormalizer());
   }
 
   if (!isNil(options?.secretsToFetch)) {
@@ -127,12 +149,30 @@ export function makeLambdaHandler(
         cacheExpiry: 30 * 1000,
         disablePrefetch: true,
         fetchData: options.secretsToFetch,
+        setToContext: true,
+      }),
+    ) as typeof middyHandler;
+  }
+
+  if (
+    !isNil(options?.schemaContextValidator) ||
+    !isNil(options?.schemaEventValidator) ||
+    !isNil(options?.schemaResultValidator)
+  ) {
+    const { schemaContextValidator, schemaEventValidator, schemaResultValidator } =
+      mustExist(options);
+
+    middyHandler = middyHandler.use(
+      validator({
+        contextSchema: schemaContextValidator,
+        eventSchema: schemaEventValidator,
+        responseSchema: schemaResultValidator,
       }),
     );
   }
 
   // Error handling. Note that handlers are called in reverse attachment order.
-  if (options?.isHttpHandler === undefined || options.isHttpHandler) {
+  if (options?.isHttpHandler) {
     middyHandler = middyHandler
       // Register the CORS middleware after the error handlers, to ensure that
       // even error responses receive our desired CORS headers.
@@ -145,7 +185,7 @@ export function makeLambdaHandler(
             "Content-Language",
             "Content-Type",
           ].join(","),
-          origins: options?.publicUrls?.split(",") ?? [],
+          origins: options.publicUrls?.split(",") ?? [],
         }),
       )
 
@@ -153,7 +193,9 @@ export function makeLambdaHandler(
       .use(httpErrorHandler({ logger: logger.error.bind(logger) }));
   }
   // Handle AbstractError.
-  middyHandler = middyHandler.use(errorHandlerMiddleware({ logger: logger.error.bind(logger) }));
+  middyHandler = middyHandler.use(
+    errorHandlerMiddleware({ logger: logger.error.bind(logger) }),
+  ) as typeof middyHandler;
 
   return middyHandler;
 }

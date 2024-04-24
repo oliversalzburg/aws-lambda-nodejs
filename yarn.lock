@@ -885,6 +885,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@middy/event-normalizer@npm:5.3.2":
+  version: 5.3.2
+  resolution: "@middy/event-normalizer@npm:5.3.2"
+  dependencies:
+    "@middy/util": "npm:5.3.2"
+  checksum: 10c0/e46e7418bceca283abb1de4a36a5bb3a1d6f7a6cbf644406464da7e36ea93130c72333dfbc7c9045acc10284be5f2fbe3f11f0033ea8d5ff262f63834f40f358
+  languageName: node
+  linkType: hard
+
 "@middy/http-cors@npm:5.3.2":
   version: 5.3.2
   resolution: "@middy/http-cors@npm:5.3.2"
@@ -5369,6 +5378,7 @@ __metadata:
     "@aws-lambda-powertools/tracer": "npm:1.18.1"
     "@aws-sdk/client-secrets-manager": "npm:3.556.0"
     "@middy/core": "npm:5.3.2"
+    "@middy/event-normalizer": "npm:5.3.2"
     "@middy/http-cors": "npm:5.3.2"
     "@middy/http-error-handler": "npm:5.3.2"
     "@middy/http-event-normalizer": "npm:5.3.2"
