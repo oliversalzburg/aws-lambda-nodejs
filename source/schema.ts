@@ -10,7 +10,7 @@ export const PingFunctionEventSchema = {
         ping: {
           description:
             "The local time of the client when the message was generated, as a UNIX timestamp.",
-          min: 0,
+          minimum: 0,
           type: "number",
         },
       },
@@ -34,7 +34,7 @@ export const PingFunctionResultSchema = {
         },
         ping: {
           description: "The time that was provided with the incoming ping signal.",
-          min: 0,
+          minimum: 0,
           type: "number",
         },
         pong: {
@@ -67,6 +67,7 @@ export const PingFunctionEnvironmentSchema = {
   type: "object",
   additionalProperties: true,
 } as const;
+export const environmentSchema = PingFunctionEnvironmentSchema;
 
 export type PingFunctionEvent = APIGatewayEvent<FromSchema<typeof PingFunctionEventSchema>>;
 export type PingFunctionResult = APIGatewayResult<FromSchema<typeof PingFunctionResultSchema>>;
