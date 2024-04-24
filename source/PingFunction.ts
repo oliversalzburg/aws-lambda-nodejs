@@ -23,7 +23,7 @@ export class PingFunction implements LambdaInterface {
 
     const now = new Date().getTime();
 
-    logger.info(`Incoming PING request with timestamp: '${event.body.ping}'`);
+    logger.info(`Incoming PING request with timestamp: '${event.body.ping.toString()}'`);
 
     await sleep(1);
 
