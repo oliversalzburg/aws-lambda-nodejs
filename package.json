@@ -35,7 +35,7 @@
     "@oliversalzburg/js-utils": "0.0.29",
     "@types/aws-lambda": "8.10.137",
     "aws-lambda": "1.0.7",
-    "json-schema-to-ts": "3.0.1"
+    "json-schema-to-ts": "3.1.0"
   },
   "devDependencies": {
     "@types/chai": "4.3.16",
