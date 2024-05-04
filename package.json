@@ -38,7 +38,7 @@
     "json-schema-to-ts": "3.0.1"
   },
   "devDependencies": {
-    "@types/chai": "4.3.15",
+    "@types/chai": "4.3.16",
     "@types/eslint": "8.56.10",
     "@types/mocha": "10.0.6",
     "@types/node": "20.12.8",
