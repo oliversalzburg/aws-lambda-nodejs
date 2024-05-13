@@ -32,7 +32,7 @@
     "@middy/http-security-headers": "5.3.4",
     "@middy/secrets-manager": "5.3.4",
     "@middy/validator": "5.3.4",
-    "@oliversalzburg/js-utils": "0.0.29",
+    "@oliversalzburg/js-utils": "0.0.30",
     "@types/aws-lambda": "8.10.137",
     "aws-lambda": "1.0.7",
     "json-schema-to-ts": "3.1.0"
