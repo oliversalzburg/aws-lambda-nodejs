@@ -37,7 +37,7 @@
     "json-schema-to-ts": "3.1.0"
   },
   "devDependencies": {
-    "@types/aws-lambda": "8.10.137",
+    "@types/aws-lambda": "8.10.138",
     "@types/chai": "4.3.16",
     "@types/eslint": "8.56.10",
     "@types/mocha": "10.0.6",
