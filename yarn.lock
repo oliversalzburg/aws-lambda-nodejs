@@ -112,9 +112,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-secrets-manager@npm:3.578.0":
-  version: 3.578.0
-  resolution: "@aws-sdk/client-secrets-manager@npm:3.578.0"
+"@aws-sdk/client-secrets-manager@npm:3.580.0":
+  version: 3.580.0
+  resolution: "@aws-sdk/client-secrets-manager@npm:3.580.0"
   dependencies:
     "@aws-crypto/sha256-browser": "npm:3.0.0"
     "@aws-crypto/sha256-js": "npm:3.0.0"
@@ -158,7 +158,7 @@ __metadata:
     "@smithy/util-utf8": "npm:^3.0.0"
     tslib: "npm:^2.6.2"
     uuid: "npm:^9.0.1"
-  checksum: 10c0/b1eb4267753a3ab12430d1c814bd2528513224900c7ed275e9e9a4a16dc99a01337ebb792379960ccac9ac367e18f6633689eedb520b0d553a316c9e6582b91c
+  checksum: 10c0/a97ee594acec06b77dca2218f672ac43c60e261acb134bd061fcb5121cf2b199f22db6a25da3a8ad8018eca8479c76fc5f6849853b9a41c7a7594adf936c4292
   languageName: node
   linkType: hard
 
@@ -5373,7 +5373,7 @@ __metadata:
     "@aws-lambda-powertools/logger": "npm:2.1.1"
     "@aws-lambda-powertools/metrics": "npm:2.1.1"
     "@aws-lambda-powertools/tracer": "npm:2.1.1"
-    "@aws-sdk/client-secrets-manager": "npm:3.578.0"
+    "@aws-sdk/client-secrets-manager": "npm:3.580.0"
     "@middy/core": "npm:5.3.5"
     "@middy/event-normalizer": "npm:5.3.5"
     "@middy/http-cors": "npm:5.3.5"
