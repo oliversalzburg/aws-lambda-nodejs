@@ -25,8 +25,7 @@ export abstract class SchemaExporter {
       };
     };
 
-    const name = manifest.name.replace(/^@anwr-media\/fn-/, "");
-    return name;
+    return manifest.name;
   }
 
   static schemaHasBody(schema: JSONSchema4) {
