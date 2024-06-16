@@ -1,5 +1,8 @@
 import { APIGatewayProxyEvent } from "aws-lambda";
 
+/**
+ * Defines an event received from an API Gateway integration.
+ */
 export type APIGatewayEvent<TSchema, TBase = APIGatewayProxyEvent> = Omit<
   TBase,
   // These are the fields we currently validate. We don't want any generic
@@ -11,7 +14,6 @@ export type APIGatewayEvent<TSchema, TBase = APIGatewayProxyEvent> = Omit<
     /**
      * The cookies are only available if the proper cookie parser
      * middleware has been installed in the middy framework.
-     *
      * @deprecated Use a field defined in the schema of the lambda.
      */
     cookies: Partial<Record<string, string>>;

@@ -1,3 +1,4 @@
+import { redirectErrorsToConsole } from "@oliversalzburg/js-utils";
 import esbuild from "esbuild";
 
 esbuild
@@ -10,4 +11,4 @@ esbuild
     sourcemap: true,
     target: "node20",
   })
-  .catch(console.error);
+  .catch(redirectErrorsToConsole(console));

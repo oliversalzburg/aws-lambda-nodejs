@@ -5,9 +5,12 @@ import Ajv, { Schema } from "ajv";
 const ajv = new Ajv({ allErrors: true, coerceTypes: "array" });
 
 /**
- * read the environment from process.env given the environment json schema
- * @param schema
- * @param env
+ * Read all variables from the environment, validated against the given schema.
+ * @param name - A name that identifies the current environment.
+ * This is intended to help finding the origin of errors thrown by this function.
+ * @param schema - The schema to validate the environment against.
+ * @param env - The current process environment.
+ * @returns The validated environment variables.
  */
 export const getEnvironment = function <T = unknown>(
   name: string,
@@ -22,7 +25,7 @@ export const getEnvironment = function <T = unknown>(
     if (value !== undefined) {
       try {
         parsedEnv[key] = JSON.parse(value);
-      } catch (err) {
+      } catch (_error) {
         // try again, if value is a simple string
         parsedEnv[key] = JSON.parse(JSON.stringify(value));
       }

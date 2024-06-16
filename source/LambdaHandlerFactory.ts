@@ -18,6 +18,9 @@ import { Context } from "aws-lambda";
 import { logger, metrics, tracer } from "./AwsPowerTools.js";
 import errorHandlerMiddleware from "./ErrorHandlerMiddleware.js";
 
+/**
+ * Handler for a Lambda integration event.
+ */
 export type Handler<TEvent, TResult, TContext> = (
   event: TEvent,
   context: TContext,
@@ -25,23 +28,38 @@ export type Handler<TEvent, TResult, TContext> = (
   // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
 ) => void | Promise<TResult>;
 
+/**
+ * A synchronous handler for a Lambda integration event.
+ */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type SyncHandler<THandler extends Handler<any, any, any>> = (
   event: Parameters<THandler>[0],
   context: Parameters<THandler>[1],
   opts: MiddyHandlerObject,
 ) => ReturnType<THandler>;
+/**
+ * An asynchronous handler for a Lambda integration event.
+ */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type AsyncHandler<THandler extends Handler<any, any, any>> = (
   event: Parameters<THandler>[0],
   context: Parameters<THandler>[1],
   opts: MiddyHandlerObject,
 ) => ReturnType<THandler>;
+/**
+ * The generic Lambda interface.
+ */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export interface LambdaInterface<E = any, R = any, C = any> {
+  /**
+   * The generic Lambda function request handler.
+   */
   handler: SyncHandler<Handler<E, R, C>> | AsyncHandler<Handler<E, R, C>>;
 }
 
+/**
+ * Options for constructing the new Lambda event handler.
+ */
 export interface LambdaHandlerOptions<
   TSecrets extends Record<string, string> | undefined = undefined,
 > {
@@ -66,21 +84,21 @@ export interface LambdaHandlerOptions<
   /**
    * A function that validates the context object.
    * This is expected to be a precompiled Ajv validator.
-   * See <https://middy.js.org/docs/middlewares/validator/> for details.
+   * See https://middy.js.org/docs/middlewares/validator/ for details.
    */
   readonly schemaContextValidator?: AjvPrecompiledValidator;
 
   /**
    * A function that validates the event object the lambda receives.
    * This is expected to be a precompiled Ajv validator.
-   * See <https://middy.js.org/docs/middlewares/validator/> for details.
+   * See https://middy.js.org/docs/middlewares/validator/ for details.
    */
   readonly schemaEventValidator?: AjvPrecompiledValidator;
 
   /**
    * A function that validates the response object of the lambda.
    * This is expected to be a precompiled Ajv validator.
-   * See <https://middy.js.org/docs/middlewares/validator/> for details.
+   * See https://middy.js.org/docs/middlewares/validator/ for details.
    */
   readonly schemaResultValidator?: AjvPrecompiledValidator;
 
@@ -91,6 +109,12 @@ export interface LambdaHandlerOptions<
   readonly secretsToFetch?: TSecrets;
 }
 
+/**
+ * Builds a new Lambda handler function.
+ * @param handlerClassInstance - An instance of a Lambda handler.
+ * @param options - Construction options for the factory.
+ * @returns The final Lambda handler.
+ */
 export function makeLambdaHandler<
   TEvent,
   TResult,

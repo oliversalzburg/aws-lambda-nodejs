@@ -69,6 +69,17 @@ export const PingFunctionEnvironmentSchema = {
 } as const;
 export const environmentSchema = PingFunctionEnvironmentSchema;
 
+/**
+ * The schema for the `event` of the PingFunction.
+ */
 export type PingFunctionEvent = APIGatewayEvent<FromSchema<typeof PingFunctionEventSchema>>;
+
+/**
+ * The schema for the result of the PingFunction.
+ */
 export type PingFunctionResult = APIGatewayResult<FromSchema<typeof PingFunctionResultSchema>>;
+
+/**
+ * The schema for the environment of the PingFunction.
+ */
 export type PingFunctionEnvironment = FromSchema<typeof PingFunctionEnvironmentSchema>;

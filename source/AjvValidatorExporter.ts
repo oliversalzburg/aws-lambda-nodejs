@@ -7,8 +7,14 @@ import path from "node:path";
 import { format } from "prettier";
 import { SchemaExporter } from "./SchemaExporter.js";
 
+/**
+ * A schema exporter that produces pre-compiled AJV validator JS code.
+ */
 export class AjvValidatorExporter extends SchemaExporter {
-  async export() {
+  /**
+   * Export the validator.
+   */
+  async export(): Promise<void> {
     const name = this.nameFromCwd(this.workspacePath);
     const lambdaName = pascalCase(name);
 

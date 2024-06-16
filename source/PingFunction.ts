@@ -4,6 +4,9 @@ import { logger } from "./AwsPowerTools.js";
 import { LambdaInterface } from "./LambdaHandlerFactory.js";
 import { PingFunctionEvent, PingFunctionResult } from "./schema.js";
 
+/**
+ * The main implementation of the Lambda function.
+ */
 export class PingFunction implements LambdaInterface {
   /**
    * A message that we'll attach to our responses.
@@ -12,13 +15,19 @@ export class PingFunction implements LambdaInterface {
 
   /**
    * Construct a new ping function.
-   * @param message A message we'll attach to our responses.
+   * @param message - A message we'll attach to our responses.
    */
   constructor(message?: string) {
     this.#message = message;
   }
 
-  async handler(event: PingFunctionEvent, context: Context): Promise<PingFunctionResult> {
+  /**
+   * Handles a single request to the Lambda function.
+   * @param event - The event object received from the Lambda invocation.
+   * @param _context - The Lambda invocation context.
+   * @returns The result of the invocation.
+   */
+  async handler(event: PingFunctionEvent, _context: Context): Promise<PingFunctionResult> {
     logger.debug("Accepted new PING request.");
 
     const now = new Date().getTime();

@@ -6,9 +6,15 @@ import { mustExist } from "@oliversalzburg/js-utils/nil.js";
 import { logger } from "./AwsPowerTools.js";
 
 const defaults = {
+  // eslint-disable-next-line no-console
   logger: console.error,
 };
 
+/**
+ * Constructs a new error handler middleware.
+ * @param opts - The options for the error handler middleware.
+ * @returns A middyjs middleware to handle errors.
+ */
 export const errorHandlerMiddleware = (opts = {}) => {
   const options = { ...defaults, ...opts };
 
