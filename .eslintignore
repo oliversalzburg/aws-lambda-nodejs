@@ -1,6 +1,0 @@
-.yarn/
-coverage/
-node_modules/
-output/
-
-*-precompiled.js
