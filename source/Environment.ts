@@ -1,5 +1,5 @@
-import { InvalidArgumentError } from "@oliversalzburg/js-utils";
-import { mustExist } from "@oliversalzburg/js-utils/nil.js";
+import { mustExist } from "@oliversalzburg/js-utils/data/nil.js";
+import { InvalidArgumentError } from "@oliversalzburg/js-utils/errors/InvalidArgumentError.js";
 import Ajv, { Schema } from "ajv";
 
 const ajv = new Ajv({ allErrors: true, coerceTypes: "array" });

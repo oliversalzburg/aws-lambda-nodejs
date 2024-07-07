@@ -1,8 +1,8 @@
 import middy from "@middy/core";
 import { normalizeHttpResponse } from "@middy/util";
-import { AbstractError } from "@oliversalzburg/js-utils/error/AbstractError.js";
-import { InternalError } from "@oliversalzburg/js-utils/error/InternalError.js";
-import { mustExist } from "@oliversalzburg/js-utils/nil.js";
+import { mustExist } from "@oliversalzburg/js-utils/data/nil.js";
+import { AbstractError } from "@oliversalzburg/js-utils/errors/AbstractError.js";
+import { InternalError } from "@oliversalzburg/js-utils/errors/InternalError.js";
 import { logger } from "./AwsPowerTools.js";
 
 const defaults = {

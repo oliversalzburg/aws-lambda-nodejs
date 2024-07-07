@@ -1,4 +1,4 @@
-import { coalesceArray } from "@oliversalzburg/js-utils";
+import { coalesceArray } from "@oliversalzburg/js-utils/data/nil.js";
 import Ajv from "ajv";
 import standaloneCode from "ajv/dist/standalone/index.js";
 import { pascalCase } from "change-case";

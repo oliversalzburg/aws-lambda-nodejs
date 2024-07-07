@@ -1,4 +1,4 @@
-import { isNil } from "@oliversalzburg/js-utils/nil.js";
+import { isNil } from "@oliversalzburg/js-utils/data/nil.js";
 import { JSONSchema4 } from "json-schema";
 import path from "node:path";
 
