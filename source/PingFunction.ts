@@ -1,4 +1,4 @@
-import { sleep } from "@oliversalzburg/js-utils/async.js";
+import { sleep } from "@oliversalzburg/js-utils/async/async.js";
 import { Context } from "aws-lambda";
 import { logger } from "./AwsPowerTools.js";
 import { LambdaInterface } from "./LambdaHandlerFactory.js";
