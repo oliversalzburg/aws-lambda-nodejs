@@ -1607,6 +1607,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/json-schema@npm:7.0.15":
+  version: 7.0.15
+  resolution: "@types/json-schema@npm:7.0.15"
+  checksum: 10c0/a996a745e6c5d60292f36731dd41341339d4eeed8180bb09226e5c8d23759067692b1d88e5d91d72ee83dfc00d3aca8e7bd43ea120516c17922cbcb7c3e252db
+  languageName: node
+  linkType: hard
+
 "@types/mocha@npm:10.0.7":
   version: 10.0.7
   resolution: "@types/mocha@npm:10.0.7"
@@ -5634,6 +5641,7 @@ __metadata:
     "@oliversalzburg/js-utils": "npm:0.0.59"
     "@types/aws-lambda": "npm:8.10.141"
     "@types/chai": "npm:4.3.16"
+    "@types/json-schema": "npm:7.0.15"
     "@types/mocha": "npm:10.0.7"
     "@types/node": "npm:20.14.10"
     aws-lambda: "npm:1.0.7"
