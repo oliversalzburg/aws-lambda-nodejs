@@ -41,7 +41,7 @@
     "@eslint/js": "9.8.0",
     "@oliversalzburg/eslint-config": "0.0.24",
     "@types/aws-lambda": "8.10.142",
-    "@types/chai": "4.3.16",
+    "@types/chai": "4.3.17",
     "@types/mocha": "10.0.7",
     "@types/node": "20.14.13",
     "chai": "5.1.1",
