@@ -12,11 +12,7 @@ const ajv = new Ajv({ allErrors: true, coerceTypes: "array" });
  * @param env - The current process environment.
  * @returns The validated environment variables.
  */
-export const getEnvironment = function <T = unknown>(
-  name: string,
-  schema: Schema,
-  env = process.env,
-): T {
+export const getEnvironment = function (name: string, schema: Schema, env = process.env) {
   const validate = ajv.compile(schema);
 
   const parsedEnv: Record<string, unknown> = {};
@@ -33,7 +29,7 @@ export const getEnvironment = function <T = unknown>(
   });
 
   if (validate(parsedEnv)) {
-    return parsedEnv as T;
+    return parsedEnv;
   }
 
   throw new InvalidArgumentError(

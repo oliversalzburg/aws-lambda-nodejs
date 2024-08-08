@@ -4,7 +4,7 @@ import { PingFunction } from "./PingFunction.js";
 import { environmentSchema, eventSchema, responseSchema } from "./schema-precompiled.js";
 import { PingFunctionEnvironment } from "./schema.js";
 
-const env = getEnvironment<PingFunctionEnvironment>("PingFunction", environmentSchema);
+const env = getEnvironment("PingFunction", environmentSchema) as PingFunctionEnvironment;
 const handlerClass = new PingFunction("Hello world");
 
 const handler = makeLambdaHandler(handlerClass, {
