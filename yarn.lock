@@ -901,111 +901,111 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@middy/core@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/core@npm:5.4.5"
+"@middy/core@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/core@npm:5.4.6"
   dependencies:
     "@datastream/core": "npm:0.0.36"
-  checksum: 10c0/60e94f2da2cc4bac134ecd4d44f5fad9bffb14c9baf4adbe637ad33d7d0c60a7c598d79d0c6f62407fd4efa853d6b7bd63655d6fd0499ecf6007f8b61ac4b7b8
+  checksum: 10c0/f45fe5142082cc56c13428a3d3d5cb9d9052339aa4e9a77081c041cb4d8f45650ad25f02babf62ed3299fd3b188a30cfe2246bc55c2e85878ccd412d03c0f391
   languageName: node
   linkType: hard
 
-"@middy/event-normalizer@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/event-normalizer@npm:5.4.5"
+"@middy/event-normalizer@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/event-normalizer@npm:5.4.6"
   dependencies:
-    "@middy/util": "npm:5.4.5"
-  checksum: 10c0/0767ea02aa60c4972e7e179b9845b7f92a177d82ca7f341832fe808fc5a44bd7f65fc71a2dd1a565206854fed59cb9e6817a5f2ac2cd87a8dfb7adf31048bcc7
+    "@middy/util": "npm:5.4.6"
+  checksum: 10c0/beb1a0e9d8117d3ce2a6e37736fdc479cf5d73763c6096add0e711394bb0732435a7611eccc21cae7c6488dbd5e1c16f18a510d914a7e7135ca64f1afc446398
   languageName: node
   linkType: hard
 
-"@middy/http-cors@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/http-cors@npm:5.4.5"
+"@middy/http-cors@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/http-cors@npm:5.4.6"
   dependencies:
-    "@middy/util": "npm:5.4.5"
-  checksum: 10c0/ff8b18947f0d172495ed0cd283b45f5a30a305ef969d2e178e1bd16120c6b3b32fa43b0c2c2a7ee346a44fac4e8a32ec333ce09376e07962f72f960e05ff7711
+    "@middy/util": "npm:5.4.6"
+  checksum: 10c0/860d0750beec50d17a32f67a7eaa1e60b78b1b6f082dff04120043e336d8d5c0f24efde94267e413b8c7c92b9ca9e0e82f984cb348ca8ecf69e483618f4d54b8
   languageName: node
   linkType: hard
 
-"@middy/http-error-handler@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/http-error-handler@npm:5.4.5"
+"@middy/http-error-handler@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/http-error-handler@npm:5.4.6"
   dependencies:
-    "@middy/util": "npm:5.4.5"
-  checksum: 10c0/18c961ac23df058d6b967ca3347c080edf72fb31740febcb99a489e8f1fbed872886a4c704a6ff1041f3d75ec8b702aec8ebc3a27bdc171522f1d774887c2ef5
+    "@middy/util": "npm:5.4.6"
+  checksum: 10c0/ed537058bf0ba0c91166ba282b4a12d36bfa77a36c9b655930c1237b3bc99a5ee7db1e49a3c0df6df4e14d89688040565edcb5dd98449e8d64aee64d0db0f5f7
   languageName: node
   linkType: hard
 
-"@middy/http-event-normalizer@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/http-event-normalizer@npm:5.4.5"
-  checksum: 10c0/0d1c20cc69ab7ba4cb790334b6a282b9acb09c82fe75236beaeb6ce7665a5a04d191dd78589608aca0f6f3eaf96d31d0a5cca6e12cc13ca602bcfe3c8187d6e5
+"@middy/http-event-normalizer@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/http-event-normalizer@npm:5.4.6"
+  checksum: 10c0/4fd3c58b1112ef2c9b96a40552caed757aedc865a415436c1d25562bfc7bb8384ef8c3718bc9ca69459eb3a90a86f19b24ac453e463d9f29b11c56916d5545bd
   languageName: node
   linkType: hard
 
-"@middy/http-header-normalizer@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/http-header-normalizer@npm:5.4.5"
-  checksum: 10c0/8f8b31916d290934a8664a8cb58c6fbc989a375d657520feaec119d7b806d71874258fff1424c73834f28151a21069d4e94a5fed20ecb78a037aff01ad116d9a
+"@middy/http-header-normalizer@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/http-header-normalizer@npm:5.4.6"
+  checksum: 10c0/4f656cc2b8428cf0ce6f7fb544e87c0a3f8f509d6bbce3949ab8612a9498424e833caa87ac861bfe42714e0a707b32b746d7d07a9e253eb3fdf708d5a906f165
   languageName: node
   linkType: hard
 
-"@middy/http-json-body-parser@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/http-json-body-parser@npm:5.4.5"
+"@middy/http-json-body-parser@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/http-json-body-parser@npm:5.4.6"
   dependencies:
-    "@middy/util": "npm:5.4.5"
-  checksum: 10c0/ba85eab66f22d63510d173e17b08fcf1134c7b652fb325250e38a9bcf6aa82cf6bbdcf7101cfeec4c6069e0e98ab4ce6c30d345e42802e9e9db13fcb481b3c9d
+    "@middy/util": "npm:5.4.6"
+  checksum: 10c0/109ef59536bfdc90e6c82482012495eff8691f3253bbd6359c4aee072550151fd342ca772bc6d57fdcc520c712b9f6f84a8e479f1c69b04d25931e4ee7de2846
   languageName: node
   linkType: hard
 
-"@middy/http-response-serializer@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/http-response-serializer@npm:5.4.5"
+"@middy/http-response-serializer@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/http-response-serializer@npm:5.4.6"
   dependencies:
-    "@middy/util": "npm:5.4.5"
-  checksum: 10c0/8718ef04daf268fbfa46ccb780dc014c6ae0672c41226744383c570f187d27aab84fd72e76b55b9b074bf869bc09efe9c333f613d766c6f0b2ba064e45fcd0b9
+    "@middy/util": "npm:5.4.6"
+  checksum: 10c0/870289eb8e1dba32eb436e8debe737f42112b3e456c74de0df1f8e25cd8c1152685194313c78fc9d794b0c511b07ace91825c6128e3096ca0fc9997c8b0b0299
   languageName: node
   linkType: hard
 
-"@middy/http-security-headers@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/http-security-headers@npm:5.4.5"
+"@middy/http-security-headers@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/http-security-headers@npm:5.4.6"
   dependencies:
-    "@middy/util": "npm:5.4.5"
-  checksum: 10c0/0d20751a6badfefee975192ce67221b96eb15fd1391a1522e9bfb555035ca43dc34f62be6d483255259b4274d567715c440a9e8c85f8905661408bb3535189f5
+    "@middy/util": "npm:5.4.6"
+  checksum: 10c0/a21d51f13484129eb9dde6f0e2c902dc92511bb86ce9b9a1f1577d35a756968e3717f013f265240dfd4acc81f2b0ce04f909d004d8857f654fd680b74507576e
   languageName: node
   linkType: hard
 
-"@middy/secrets-manager@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/secrets-manager@npm:5.4.5"
+"@middy/secrets-manager@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/secrets-manager@npm:5.4.6"
   dependencies:
-    "@middy/util": "npm:5.4.5"
-  checksum: 10c0/f3a559bfa5edc27ad6b06f21b30d34d1588980959d16b030fa3d542eef545199096b4c4cb67831bf9c38e83f071395143e9a9564dc98cf9a090fc7047798efb0
+    "@middy/util": "npm:5.4.6"
+  checksum: 10c0/8976a61051b0ad2f4982150ab0ff502d28559b4e35db2a515e625659e3d9a7258e87585e6aa861a7bbe98a3e7783e6c3a738e83a86bfdc443162cf625c09e2e7
   languageName: node
   linkType: hard
 
-"@middy/util@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/util@npm:5.4.5"
-  checksum: 10c0/dd8ca30a0b766128fd9aa6587348fe0f2d08f3ed7bc2a5c14d8b9b6980ae72717f8e1c7cac37c69bc3cf0decb98cde7a4be4cb9cb858ebe987d9bca40021bca8
+"@middy/util@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/util@npm:5.4.6"
+  checksum: 10c0/c5c6db6a33b5bb226ba9caf1d00ba32ac44274ce00db7442f8b853741ea96fa67d730f3ee18cf14604976315b30045cdf41a159d806427570756f6c3e80ed320
   languageName: node
   linkType: hard
 
-"@middy/validator@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@middy/validator@npm:5.4.5"
+"@middy/validator@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@middy/validator@npm:5.4.6"
   dependencies:
-    "@middy/util": "npm:5.4.5"
+    "@middy/util": "npm:5.4.6"
     ajv: "npm:8.17.1"
     ajv-errors: "npm:3.0.0"
     ajv-formats: "npm:3.0.1"
     ajv-formats-draft2019: "npm:1.6.1"
     ajv-ftl-i18n: "npm:0.1.1"
     ajv-keywords: "npm:5.1.0"
-  checksum: 10c0/e391e64282e0a903fdd7bf9564d27ff7d00012241280776d7ecaa4ea765124f65df622c779518dd8aa28b320aaaaeb401adf20f691a9f0ba05ba985069c478ba
+  checksum: 10c0/6c08d66973d858280ac98004d1fd49f4c5c8b92f02adb75048b7e276a0991c49ddb9c386ac149bb31a835d1878405e2d8fefc2f1bf8e25478aab3d09f5be7ebd
   languageName: node
   linkType: hard
 
@@ -5645,17 +5645,17 @@ __metadata:
     "@aws-lambda-powertools/tracer": "npm:2.7.0"
     "@aws-sdk/client-secrets-manager": "npm:3.624.0"
     "@eslint/js": "npm:9.9.0"
-    "@middy/core": "npm:5.4.5"
-    "@middy/event-normalizer": "npm:5.4.5"
-    "@middy/http-cors": "npm:5.4.5"
-    "@middy/http-error-handler": "npm:5.4.5"
-    "@middy/http-event-normalizer": "npm:5.4.5"
-    "@middy/http-header-normalizer": "npm:5.4.5"
-    "@middy/http-json-body-parser": "npm:5.4.5"
-    "@middy/http-response-serializer": "npm:5.4.5"
-    "@middy/http-security-headers": "npm:5.4.5"
-    "@middy/secrets-manager": "npm:5.4.5"
-    "@middy/validator": "npm:5.4.5"
+    "@middy/core": "npm:5.4.6"
+    "@middy/event-normalizer": "npm:5.4.6"
+    "@middy/http-cors": "npm:5.4.6"
+    "@middy/http-error-handler": "npm:5.4.6"
+    "@middy/http-event-normalizer": "npm:5.4.6"
+    "@middy/http-header-normalizer": "npm:5.4.6"
+    "@middy/http-json-body-parser": "npm:5.4.6"
+    "@middy/http-response-serializer": "npm:5.4.6"
+    "@middy/http-security-headers": "npm:5.4.6"
+    "@middy/secrets-manager": "npm:5.4.6"
+    "@middy/validator": "npm:5.4.6"
     "@oliversalzburg/eslint-config": "npm:0.0.29"
     "@oliversalzburg/js-utils": "npm:0.0.59"
     "@types/aws-lambda": "npm:8.10.143"
