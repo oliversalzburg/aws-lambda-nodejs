@@ -43,7 +43,7 @@
     "@types/aws-lambda": "8.10.143",
     "@types/chai": "4.3.17",
     "@types/mocha": "10.0.7",
-    "@types/node": "20.15.0",
+    "@types/node": "20.16.0",
     "chai": "5.1.1",
     "esbuild": "0.23.1",
     "eslint": "9.9.0",
