@@ -1589,10 +1589,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/aws-lambda@npm:8.10.143":
-  version: 8.10.143
-  resolution: "@types/aws-lambda@npm:8.10.143"
-  checksum: 10c0/1a004c8dfc9f1f99cbf0e3dd75f2c578d5518a53fc6f278791b7a7445cce380dc56513daeb2b4959823d355fb2fb690271b210af538807422b337a2e14a9aa01
+"@types/aws-lambda@npm:8.10.144":
+  version: 8.10.144
+  resolution: "@types/aws-lambda@npm:8.10.144"
+  checksum: 10c0/73296e34953215988ea1e92a11d28486ba9a80a22e36d26595284bb29259f02b9bdd815a16ee4bdaf7d44d5945194de395ee6740902395be93bcf4aa50170619
   languageName: node
   linkType: hard
 
@@ -5617,7 +5617,7 @@ __metadata:
     "@middy/validator": "npm:5.4.6"
     "@oliversalzburg/eslint-config": "npm:1.0.2"
     "@oliversalzburg/js-utils": "npm:0.0.59"
-    "@types/aws-lambda": "npm:8.10.143"
+    "@types/aws-lambda": "npm:8.10.144"
     "@types/chai": "npm:4.3.18"
     "@types/json-schema": "npm:7.0.15"
     "@types/mocha": "npm:10.0.7"
