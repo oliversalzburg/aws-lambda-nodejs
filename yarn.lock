@@ -102,9 +102,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-secrets-manager@npm:3.670.0":
-  version: 3.670.0
-  resolution: "@aws-sdk/client-secrets-manager@npm:3.670.0"
+"@aws-sdk/client-secrets-manager@npm:3.674.0":
+  version: 3.674.0
+  resolution: "@aws-sdk/client-secrets-manager@npm:3.674.0"
   dependencies:
     "@aws-crypto/sha256-browser": "npm:5.2.0"
     "@aws-crypto/sha256-js": "npm:5.2.0"
@@ -146,9 +146,10 @@ __metadata:
     "@smithy/util-middleware": "npm:^3.0.7"
     "@smithy/util-retry": "npm:^3.0.7"
     "@smithy/util-utf8": "npm:^3.0.0"
+    "@types/uuid": "npm:^9.0.1"
     tslib: "npm:^2.6.2"
     uuid: "npm:^9.0.1"
-  checksum: 10c0/f11a01e02b8e36f3e9dc257b69bb3013c732a0271f9a6b8bcbf19356205ce6890db547e25ec209a36480f45f4ab0c0a7753cf57d8e3d74527d92e038d06c4de7
+  checksum: 10c0/e54c6b6d6050f4d0c85bba4e4826dc5c31c851c9a2b78f967bd5d6dee1a3722c20a1b9fd7bc3003b79309b52ed008da1638c6f21bc63ef589dbb4eebdef535bc
   languageName: node
   linkType: hard
 
@@ -1705,6 +1706,13 @@ __metadata:
   version: 4.0.2
   resolution: "@types/parse-json@npm:4.0.2"
   checksum: 10c0/b1b863ac34a2c2172fbe0807a1ec4d5cb684e48d422d15ec95980b81475fac4fdb3768a8b13eef39130203a7c04340fc167bae057c7ebcafd7dec9fe6c36aeb1
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:^9.0.1":
+  version: 9.0.8
+  resolution: "@types/uuid@npm:9.0.8"
+  checksum: 10c0/b411b93054cb1d4361919579ef3508a1f12bf15b5fdd97337d3d351bece6c921b52b6daeef89b62340fd73fd60da407878432a1af777f40648cbe53a01723489
   languageName: node
   linkType: hard
 
@@ -5627,7 +5635,7 @@ __metadata:
     "@aws-lambda-powertools/logger": "npm:2.9.0"
     "@aws-lambda-powertools/metrics": "npm:2.9.0"
     "@aws-lambda-powertools/tracer": "npm:2.9.0"
-    "@aws-sdk/client-secrets-manager": "npm:3.670.0"
+    "@aws-sdk/client-secrets-manager": "npm:3.674.0"
     "@eslint/js": "npm:9.12.0"
     "@middy/core": "npm:5.5.1"
     "@middy/event-normalizer": "npm:5.5.1"
