@@ -535,11 +535,11 @@ __metadata:
   linkType: hard
 
 "@aws-sdk/util-locate-window@npm:^3.0.0":
-  version: 3.679.0
-  resolution: "@aws-sdk/util-locate-window@npm:3.679.0"
+  version: 3.693.0
+  resolution: "@aws-sdk/util-locate-window@npm:3.693.0"
   dependencies:
     tslib: "npm:^2.6.2"
-  checksum: 10c0/86c9b39171fdc993822b3093a06c0bbc49ce5cd9a9c36462282b0c472b536a06760b301c1aa2e2698d7a9f661898f3c7fa6cce991ab728eaeb5f952191f53bc1
+  checksum: 10c0/68630e3b6e7f47ec05c92a7f2369464f5fcd218d4dc5c4103465681424b64072d290ab565938449c0afa312cfce200e553e4a14d6a411542069d95880f3434f5
   languageName: node
   linkType: hard
 
@@ -825,8 +825,8 @@ __metadata:
   linkType: hard
 
 "@eslint/eslintrc@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@eslint/eslintrc@npm:3.1.0"
+  version: 3.2.0
+  resolution: "@eslint/eslintrc@npm:3.2.0"
   dependencies:
     ajv: "npm:^6.12.4"
     debug: "npm:^4.3.2"
@@ -837,7 +837,7 @@ __metadata:
     js-yaml: "npm:^4.1.0"
     minimatch: "npm:^3.1.2"
     strip-json-comments: "npm:^3.1.1"
-  checksum: 10c0/5b7332ed781edcfc98caa8dedbbb843abfb9bda2e86538529c843473f580e40c69eb894410eddc6702f487e9ee8f8cfa8df83213d43a8fdb549f23ce06699167
+  checksum: 10c0/43867a07ff9884d895d9855edba41acf325ef7664a8df41d957135a81a477ff4df4196f5f74dc3382627e5cc8b7ad6b815c2cea1b58f04a75aced7c43414ab8b
   languageName: node
   linkType: hard
 
@@ -2128,8 +2128,8 @@ __metadata:
   linkType: hard
 
 "aws-xray-sdk-core@npm:^3.10.1":
-  version: 3.10.1
-  resolution: "aws-xray-sdk-core@npm:3.10.1"
+  version: 3.10.2
+  resolution: "aws-xray-sdk-core@npm:3.10.2"
   dependencies:
     "@aws-sdk/types": "npm:^3.4.1"
     "@smithy/service-error-classification": "npm:^2.0.4"
@@ -2137,7 +2137,7 @@ __metadata:
     atomic-batcher: "npm:^1.0.2"
     cls-hooked: "npm:^4.2.2"
     semver: "npm:^7.5.3"
-  checksum: 10c0/e7a084e08458ef8a75001ef5ddc137633d741f164e2e1126deae2065926e9d464ca494e55240193062503b32d512e567a2d7bc3f6ced8dff137a425d4623f0bb
+  checksum: 10c0/0d47b13687f841092e927c919085d0570aca67ad9a12251f1d8395c9628f6fcc738d962897032b993c3cf1a94e11cdbe64d23cfbd6106adde732bb46495d5c9e
   languageName: node
   linkType: hard
 
