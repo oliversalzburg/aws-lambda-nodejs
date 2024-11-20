@@ -42,7 +42,7 @@
     "@oliversalzburg/eslint-config": "1.1.0",
     "@types/aws-lambda": "8.10.145",
     "@types/chai": "5.0.1",
-    "@types/mocha": "10.0.9",
+    "@types/mocha": "10.0.10",
     "@types/node": "22.9.1",
     "chai": "5.1.2",
     "esbuild": "0.24.0",
