@@ -38,7 +38,7 @@
     "json-schema-to-ts": "3.1.1"
   },
   "devDependencies": {
-    "@eslint/js": "9.16.0",
+    "@eslint/js": "9.17.0",
     "@oliversalzburg/eslint-config": "1.2.0",
     "@types/aws-lambda": "8.10.146",
     "@types/chai": "5.0.1",
@@ -46,7 +46,7 @@
     "@types/node": "22.10.2",
     "chai": "5.1.2",
     "esbuild": "0.24.0",
-    "eslint": "9.16.0",
+    "eslint": "9.17.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jsdoc": "50.6.1",
     "eslint-plugin-tsdoc": "0.4.0",
