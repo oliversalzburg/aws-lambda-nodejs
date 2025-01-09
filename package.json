@@ -20,7 +20,7 @@
     "@aws-lambda-powertools/logger": "2.12.0",
     "@aws-lambda-powertools/metrics": "2.12.0",
     "@aws-lambda-powertools/tracer": "2.12.0",
-    "@aws-sdk/client-secrets-manager": "3.723.0",
+    "@aws-sdk/client-secrets-manager": "3.726.0",
     "@middy/core": "6.0.0",
     "@middy/event-normalizer": "6.0.0",
     "@middy/http-cors": "6.0.0",
