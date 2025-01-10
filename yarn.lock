@@ -102,14 +102,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-secrets-manager@npm:3.726.0":
-  version: 3.726.0
-  resolution: "@aws-sdk/client-secrets-manager@npm:3.726.0"
+"@aws-sdk/client-secrets-manager@npm:3.726.1":
+  version: 3.726.1
+  resolution: "@aws-sdk/client-secrets-manager@npm:3.726.1"
   dependencies:
     "@aws-crypto/sha256-browser": "npm:5.2.0"
     "@aws-crypto/sha256-js": "npm:5.2.0"
     "@aws-sdk/client-sso-oidc": "npm:3.726.0"
-    "@aws-sdk/client-sts": "npm:3.726.0"
+    "@aws-sdk/client-sts": "npm:3.726.1"
     "@aws-sdk/core": "npm:3.723.0"
     "@aws-sdk/credential-provider-node": "npm:3.726.0"
     "@aws-sdk/middleware-host-header": "npm:3.723.0"
@@ -149,7 +149,7 @@ __metadata:
     "@types/uuid": "npm:^9.0.1"
     tslib: "npm:^2.6.2"
     uuid: "npm:^9.0.1"
-  checksum: 10c0/6dec884d6d0ec6d3f7036162ac49fb2610c39d1c57b9274d493bb2c6a78b6151e69282651e01baa17fd3bfd4dd02da1789215355837ffa9893b7e68aa56d0d15
+  checksum: 10c0/986b00f3591f92eefc0091d64c3bbe38d85a310b6ca7ffd4563f6fe95db354cebe33fd3cb332d26151a6bebc52ef4a9cab8d18fa7999259103319dbecc4f8d89
   languageName: node
   linkType: hard
 
@@ -248,9 +248,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-sts@npm:3.726.0":
-  version: 3.726.0
-  resolution: "@aws-sdk/client-sts@npm:3.726.0"
+"@aws-sdk/client-sts@npm:3.726.1":
+  version: 3.726.1
+  resolution: "@aws-sdk/client-sts@npm:3.726.1"
   dependencies:
     "@aws-crypto/sha256-browser": "npm:5.2.0"
     "@aws-crypto/sha256-js": "npm:5.2.0"
@@ -292,7 +292,7 @@ __metadata:
     "@smithy/util-retry": "npm:^4.0.0"
     "@smithy/util-utf8": "npm:^4.0.0"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/f097804b4f473dfd8429cf56eef3a3e8c7cbc75bddeb5f913d55aebdedfa09182677122d6f9372f67ae136a79e02b9646e28695b1f90b74fed7ea59ffd3d9761
+  checksum: 10c0/23e7140e939fc0ba0903df4e2fc4e43ae6f079f4359396ebc2e2126250bfc39a794f1e64c4600a780d6556abceb390c359a7181a0a43ede862db7690fd890c22
   languageName: node
   linkType: hard
 
@@ -5529,7 +5529,7 @@ __metadata:
     "@aws-lambda-powertools/logger": "npm:2.12.0"
     "@aws-lambda-powertools/metrics": "npm:2.12.0"
     "@aws-lambda-powertools/tracer": "npm:2.12.0"
-    "@aws-sdk/client-secrets-manager": "npm:3.726.0"
+    "@aws-sdk/client-secrets-manager": "npm:3.726.1"
     "@eslint/js": "npm:9.17.0"
     "@middy/core": "npm:6.0.0"
     "@middy/event-normalizer": "npm:6.0.0"
