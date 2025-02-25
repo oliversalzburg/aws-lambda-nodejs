@@ -1,5 +1,8 @@
 # Project Template
 
+> [!CAUTION]
+> I'm no longer actively using AWS Lambda. There is no need to continue maintaining this project. Thus, it has been **archived as of 2025-02-25**.
+
 ## Does
 
 - Provides scaffolding through [Middy](https://middy.js.org/) and [Powertools for AWS Lambda](https://docs.powertools.aws.dev/lambda/typescript/latest/), with deeper [AWS API Gateway](https://aws.amazon.com/api-gateway/) integration example
